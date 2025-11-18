@@ -195,6 +195,12 @@ Database Tables:    8
 
 ### Commit History
 ```
+✅ Milestone 1.4: AI 건강 어시스턴트 통합 (2025-01-18)
+   - OpenAI GPT-4o-mini 통합
+   - AI 건강 상담 챗봇
+   - 주간 건강 리포트 자동 생성
+   - 3 new files, 1,670 insertions
+
 ✅ Phase 1 Core Features (2025-01-24)
    - 복약 관리 완전 구현
    - 건강 기록 (혈압) 구현
