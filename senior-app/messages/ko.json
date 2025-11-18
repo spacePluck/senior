@@ -1,0 +1,97 @@
+{
+  "common": {
+    "home": "홈",
+    "search": "찾기",
+    "bookings": "예약",
+    "profile": "내 정보",
+    "more": "더보기",
+    "edit": "수정",
+    "logout": "로그아웃",
+    "location": "위치",
+    "phone": "전화",
+    "arrived": "도착",
+    "completed": "완료",
+    "scheduled": "예정",
+    "today": "오늘",
+    "regular": "단골"
+  },
+  "home": {
+    "greeting": "안녕하세요",
+    "aiAssistant": {
+      "title": "AI 도우미",
+      "placeholder": "AI 도우미에게 무엇을 도와드릴까요?"
+    },
+    "todayTasks": {
+      "title": "오늘 할 일",
+      "morningMedicine": "아침 약 복용",
+      "medicineTime": "08:00 · 혈압약, 당뇨약",
+      "completeMedicine": "복용 완료",
+      "haircutBooking": "이발 예약",
+      "haircutTime": "11:00 · 명성이발관",
+      "viewLocation": "위치 보기",
+      "call": "전화 걸기",
+      "arrivedButton": "도착했어요"
+    },
+    "services": {
+      "title": "서비스",
+      "haircut": "이발",
+      "meal": "식사",
+      "hospital": "병원",
+      "cleaning": "청소",
+      "leisure": "여가",
+      "taxi": "택시"
+    },
+    "recommendations": {
+      "title": "이번 주 추천",
+      "favoriteShop": "단골집이에요! 예약하시겠어요?",
+      "bookNow": "예약하기"
+    },
+    "alerts": {
+      "medicineComplete": "복용 완료!",
+      "viewLocation": "위치 보기",
+      "call": "전화 걸기",
+      "bookNow": "예약하기"
+    }
+  },
+  "search": {
+    "title": "서비스 찾기",
+    "placeholder": "무엇을 찾으시나요?",
+    "categories": {
+      "title": "전체 카테고리",
+      "haircut": "이미용",
+      "meal": "식사",
+      "hospital": "병원/건강",
+      "life": "생활 서비스",
+      "leisure": "여가/문화",
+      "transport": "교통"
+    },
+    "recent": {
+      "title": "최근 검색",
+      "haircut": "이발소",
+      "cleaning": "청소 서비스"
+    }
+  },
+  "bookings": {
+    "title": "내 예약",
+    "upcoming": "예정",
+    "completed": "완료",
+    "showCode": "사장님께 이 코드를 보여주세요",
+    "viewLocation": "위치 보기",
+    "arrived": "도착했어요",
+    "generalHaircut": "일반 이발",
+    "generalCleaning": "일반 청소 (3시간)",
+    "kneeTreatment": "무릎 진료"
+  },
+  "profile": {
+    "title": "내 정보",
+    "points": "보유 포인트",
+    "paymentMethods": "결제 수단 관리",
+    "familyConnection": "가족 연결",
+    "addressManagement": "주소 관리",
+    "medicineManagement": "약 관리",
+    "notificationSettings": "알림 설정",
+    "customerService": "고객센터",
+    "settings": "설정"
+  }
+}
+

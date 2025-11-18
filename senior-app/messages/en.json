@@ -1,0 +1,97 @@
+{
+  "common": {
+    "home": "Home",
+    "search": "Search",
+    "bookings": "Bookings",
+    "profile": "Profile",
+    "more": "More",
+    "edit": "Edit",
+    "logout": "Logout",
+    "location": "Location",
+    "phone": "Call",
+    "arrived": "Arrived",
+    "completed": "Completed",
+    "scheduled": "Scheduled",
+    "today": "Today",
+    "regular": "Regular"
+  },
+  "home": {
+    "greeting": "Hello",
+    "aiAssistant": {
+      "title": "AI Assistant",
+      "placeholder": "What can the AI assistant help you with?"
+    },
+    "todayTasks": {
+      "title": "Today's Tasks",
+      "morningMedicine": "Morning Medication",
+      "medicineTime": "08:00 · Blood pressure, Diabetes",
+      "completeMedicine": "Completed",
+      "haircutBooking": "Haircut Appointment",
+      "haircutTime": "11:00 · Myeongseong Hair Salon",
+      "viewLocation": "View Location",
+      "call": "Call",
+      "arrivedButton": "I've Arrived"
+    },
+    "services": {
+      "title": "Services",
+      "haircut": "Haircut",
+      "meal": "Meal",
+      "hospital": "Hospital",
+      "cleaning": "Cleaning",
+      "leisure": "Leisure",
+      "taxi": "Taxi"
+    },
+    "recommendations": {
+      "title": "This Week's Recommendations",
+      "favoriteShop": "This is your regular place! Would you like to make a reservation?",
+      "bookNow": "Book Now"
+    },
+    "alerts": {
+      "medicineComplete": "Medication completed!",
+      "viewLocation": "View Location",
+      "call": "Call",
+      "bookNow": "Book Now"
+    }
+  },
+  "search": {
+    "title": "Find Services",
+    "placeholder": "What are you looking for?",
+    "categories": {
+      "title": "All Categories",
+      "haircut": "Hair & Beauty",
+      "meal": "Meals",
+      "hospital": "Hospital/Health",
+      "life": "Life Services",
+      "leisure": "Leisure/Culture",
+      "transport": "Transportation"
+    },
+    "recent": {
+      "title": "Recent Searches",
+      "haircut": "Hair Salon",
+      "cleaning": "Cleaning Service"
+    }
+  },
+  "bookings": {
+    "title": "My Bookings",
+    "upcoming": "Upcoming",
+    "completed": "Completed",
+    "showCode": "Please show this code to the owner",
+    "viewLocation": "View Location",
+    "arrived": "I've Arrived",
+    "generalHaircut": "Regular Haircut",
+    "generalCleaning": "Regular Cleaning (3 hours)",
+    "kneeTreatment": "Knee Treatment"
+  },
+  "profile": {
+    "title": "Profile",
+    "points": "Points Balance",
+    "paymentMethods": "Payment Methods",
+    "familyConnection": "Family Connection",
+    "addressManagement": "Address Management",
+    "medicineManagement": "Medicine Management",
+    "notificationSettings": "Notification Settings",
+    "customerService": "Customer Service",
+    "settings": "Settings"
+  }
+}
+

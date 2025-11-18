@@ -1,0 +1,97 @@
+{
+  "common": {
+    "home": "ホーム",
+    "search": "検索",
+    "bookings": "予約",
+    "profile": "プロフィール",
+    "more": "もっと見る",
+    "edit": "編集",
+    "logout": "ログアウト",
+    "location": "場所",
+    "phone": "電話",
+    "arrived": "到着",
+    "completed": "完了",
+    "scheduled": "予定",
+    "today": "今日",
+    "regular": "常連"
+  },
+  "home": {
+    "greeting": "こんにちは",
+    "aiAssistant": {
+      "title": "AIアシスタント",
+      "placeholder": "AIアシスタントに何をお手伝いしますか？"
+    },
+    "todayTasks": {
+      "title": "今日のタスク",
+      "morningMedicine": "朝の薬",
+      "medicineTime": "08:00 · 血圧薬、糖尿病薬",
+      "completeMedicine": "服用完了",
+      "haircutBooking": "散髪予約",
+      "haircutTime": "11:00 · 明成理髪店",
+      "viewLocation": "場所を見る",
+      "call": "電話をかける",
+      "arrivedButton": "到着しました"
+    },
+    "services": {
+      "title": "サービス",
+      "haircut": "散髪",
+      "meal": "食事",
+      "hospital": "病院",
+      "cleaning": "清掃",
+      "leisure": "レジャー",
+      "taxi": "タクシー"
+    },
+    "recommendations": {
+      "title": "今週のおすすめ",
+      "favoriteShop": "常連店です！予約しますか？",
+      "bookNow": "予約する"
+    },
+    "alerts": {
+      "medicineComplete": "服用完了！",
+      "viewLocation": "場所を見る",
+      "call": "電話をかける",
+      "bookNow": "予約する"
+    }
+  },
+  "search": {
+    "title": "サービス検索",
+    "placeholder": "何をお探しですか？",
+    "categories": {
+      "title": "全カテゴリー",
+      "haircut": "美容",
+      "meal": "食事",
+      "hospital": "病院/健康",
+      "life": "生活サービス",
+      "leisure": "レジャー/文化",
+      "transport": "交通"
+    },
+    "recent": {
+      "title": "最近の検索",
+      "haircut": "理髪店",
+      "cleaning": "清掃サービス"
+    }
+  },
+  "bookings": {
+    "title": "予約一覧",
+    "upcoming": "予定",
+    "completed": "完了",
+    "showCode": "店主にこのコードを見せてください",
+    "viewLocation": "場所を見る",
+    "arrived": "到着しました",
+    "generalHaircut": "通常の散髪",
+    "generalCleaning": "通常の清掃（3時間）",
+    "kneeTreatment": "膝の診察"
+  },
+  "profile": {
+    "title": "プロフィール",
+    "points": "保有ポイント",
+    "paymentMethods": "決済方法管理",
+    "familyConnection": "家族連携",
+    "addressManagement": "住所管理",
+    "medicineManagement": "薬管理",
+    "notificationSettings": "通知設定",
+    "customerService": "カスタマーサービス",
+    "settings": "設定"
+  }
+}
+
