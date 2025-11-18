@@ -10,7 +10,7 @@ import { useAIAssistant } from '@/hooks/useAIAssistant';
 import { formatTime } from '@/lib/utils';
 import type { ChatMessage } from '@/lib/services/ai.service';
 
-export default function AIChat Page() {
+export default function AIChatPage() {
   const t = useTranslations();
   const router = useRouter();
   const { messages, sending, sendMessage, createConversation } = useAIAssistant();

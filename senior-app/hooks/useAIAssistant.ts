@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from 'react';
 import { AIService, type ChatMessage, type WeeklyHealthReport } from '@/lib/services/ai.service';
-import { useUserStore } from '@/store/userStore';
+import { useUserStore } from '@/store/useUserStore';
 import type { Database } from '@/types/database';
 
 type AIConversation = Database['public']['Tables']['ai_conversations']['Row'];
