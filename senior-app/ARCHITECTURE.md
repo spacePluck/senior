@@ -175,7 +175,7 @@ export default function MedicationsPage() {
                         ▼
 ┌─────────────────────────────────────────────────────────┐
 │                      Hooks Layer                         │
-│          (useMedications, useHealthRecords)              │
+│   (useMedications, useHealthRecords, useAIAssistant)     │
 │                                                           │
 │  • Manages loading/error states                          │
 │  • Calls services                                         │
@@ -186,7 +186,8 @@ export default function MedicationsPage() {
                         ▼
 ┌─────────────────────────────────────────────────────────┐
 │                    Service Layer                         │
-│     (MedicationService, HealthService, UserService)      │
+│  (MedicationService, HealthService, UserService,         │
+│   AIService)                                              │
 │                                                           │
 │  • Pure business logic                                    │
 │  • No React dependencies                                  │
@@ -291,6 +292,19 @@ export class MedicationService {
 ✓ getLinkedSeniors(familyId)
 ✓ getCurrentUser()
 ✓ uploadProfileImage(userId, file)
+```
+
+### AIService
+```typescript
+✓ createConversation(userId, title?)
+✓ getConversations(userId)
+✓ getConversation(conversationId)
+✓ sendMessage(conversationId, userMessage, userId)
+✓ deleteConversation(conversationId)
+✓ getQuickAdvice(question, userId)
+✓ generateWeeklyReport(userId)
+✓ getUserHealthContext(userId) [private]
+✓ getSystemPrompt() [private]
 ```
 
 ---

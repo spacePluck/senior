@@ -224,6 +224,8 @@ export default function Home() {
 
           <div className="responsive-grid responsive-grid-3">
             {[
+              { icon: 'messageCircle', label: 'AI 상담', bg: '#E8F0FF', color: 'var(--color-primary)', href: '/ai/chat' },
+              { icon: 'fileText', label: '건강 리포트', bg: '#E8F9F3', color: 'var(--color-success)', href: '/ai/report' },
               { icon: 'scissors', labelKey: 'home.services.haircut', bg: '#FFE8EF', color: 'var(--color-accent-pink)' },
               { icon: 'utensils', labelKey: 'home.services.meal', bg: '#FFF4E8', color: 'var(--color-accent-peach)' },
               { icon: 'hospital', labelKey: 'home.services.hospital', bg: '#E8F0FF', color: 'var(--color-primary)' },
@@ -239,7 +241,7 @@ export default function Home() {
                   borderRadius: 'var(--radius-lg)',
                   boxShadow: 'var(--shadow-card)'
                 }}
-                onClick={() => alert(`${t(service.labelKey)} 서비스`)}
+                onClick={() => service.href ? window.location.href = service.href : alert(`${t(service.labelKey)} 서비스`)}
               >
                 <div
                   className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center"
@@ -254,7 +256,7 @@ export default function Home() {
                   className="text-sm md:text-base font-bold"
                   style={{ color: 'var(--color-text-primary)' }}
                 >
-                  {t(service.labelKey)}
+                  {service.label || t(service.labelKey)}
                 </span>
               </button>
             ))}
