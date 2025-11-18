@@ -63,54 +63,70 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Quick Actions */}
+        {/* Services */}
         <section>
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 px-1">
-            빠른 서비스
+            서비스
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
             <button
-              onClick={() => router.push('/medications')}
-              className="bg-white rounded-2xl p-6 text-left hover:shadow-lg transition group"
+              onClick={() => alert('이발 서비스 (Phase 2)')}
+              className="bg-white rounded-2xl p-4 md:p-6 text-center hover:shadow-lg transition group"
             >
-              <div className="w-14 h-14 bg-pink-100 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                <Icon name="pill" size={28} color="#EC4899" />
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition">
+                <Icon name="scissors" size={24} color="#EC4899" />
               </div>
-              <h3 className="font-bold text-lg text-gray-900 mb-1">복약 관리</h3>
-              <p className="text-sm text-gray-500">약 복용 기록 확인</p>
+              <h3 className="font-bold text-sm md:text-base text-gray-900">이발</h3>
             </button>
 
             <button
-              onClick={() => router.push('/health')}
-              className="bg-white rounded-2xl p-6 text-left hover:shadow-lg transition group"
+              onClick={() => alert('식사 서비스 (Phase 2)')}
+              className="bg-white rounded-2xl p-4 md:p-6 text-center hover:shadow-lg transition group"
             >
-              <div className="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                <Icon name="heart" size={28} color="#10B981" />
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition">
+                <Icon name="utensils" size={24} color="#F97316" />
               </div>
-              <h3 className="font-bold text-lg text-gray-900 mb-1">건강 기록</h3>
-              <p className="text-sm text-gray-500">혈압, 혈당 관리</p>
+              <h3 className="font-bold text-sm md:text-base text-gray-900">식사</h3>
             </button>
 
             <button
               onClick={() => alert('병원 예약 서비스 (Phase 2)')}
-              className="bg-white rounded-2xl p-6 text-left hover:shadow-lg transition group"
+              className="bg-white rounded-2xl p-4 md:p-6 text-center hover:shadow-lg transition group"
             >
-              <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                <Icon name="hospital" size={28} color="#3B82F6" />
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition">
+                <Icon name="hospital" size={24} color="#3B82F6" />
               </div>
-              <h3 className="font-bold text-lg text-gray-900 mb-1">병원 예약</h3>
-              <p className="text-sm text-gray-500">진료 예약하기</p>
+              <h3 className="font-bold text-sm md:text-base text-gray-900">병원</h3>
+            </button>
+
+            <button
+              onClick={() => router.push('/medications')}
+              className="bg-white rounded-2xl p-4 md:p-6 text-center hover:shadow-lg transition group"
+            >
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-teal-100 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition">
+                <Icon name="pill" size={24} color="#14B8A6" />
+              </div>
+              <h3 className="font-bold text-sm md:text-base text-gray-900">복약</h3>
+            </button>
+
+            <button
+              onClick={() => alert('여가 서비스 (Phase 2)')}
+              className="bg-white rounded-2xl p-4 md:p-6 text-center hover:shadow-lg transition group"
+            >
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition">
+                <Icon name="gift" size={24} color="#A855F7" />
+              </div>
+              <h3 className="font-bold text-sm md:text-base text-gray-900">여가</h3>
             </button>
 
             <button
               onClick={() => alert('택시 호출 서비스 (Phase 2)')}
-              className="bg-white rounded-2xl p-6 text-left hover:shadow-lg transition group"
+              className="bg-white rounded-2xl p-4 md:p-6 text-center hover:shadow-lg transition group"
             >
-              <div className="w-14 h-14 bg-yellow-100 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                <Icon name="car" size={28} color="#F59E0B" />
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-yellow-100 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition">
+                <Icon name="car" size={24} color="#F59E0B" />
               </div>
-              <h3 className="font-bold text-lg text-gray-900 mb-1">택시 호출</h3>
-              <p className="text-sm text-gray-500">편리한 이동</p>
+              <h3 className="font-bold text-sm md:text-base text-gray-900">택시</h3>
             </button>
           </div>
         </section>
@@ -180,6 +196,131 @@ export default function Home() {
                   <Icon name="phone" size={18} color="white" />
                   전화
                 </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* This Week's Recommendations */}
+        <section>
+          <div className="flex items-center justify-between mb-4 px-1">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900">
+              이번 주 추천
+            </h2>
+            <button className="text-sm text-blue-600 font-semibold hover:text-blue-700">
+              더보기
+            </button>
+          </div>
+
+          <div className="space-y-3">
+            <div className="bg-white rounded-2xl p-6">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Icon name="scissors" size={24} color="#EC4899" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-start justify-between mb-2">
+                    <div>
+                      <h3 className="font-bold text-lg text-gray-900 mb-1">
+                        명성이발관
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-3">
+                        단골집이에요! 예약하시겠어요?
+                      </p>
+                      <div className="flex items-center gap-3 text-sm text-gray-500">
+                        <div className="flex items-center gap-1">
+                          <Icon name="star" size={16} color="#F59E0B" />
+                          <span className="font-semibold text-gray-900">4.9</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Icon name="mapPin" size={16} color="#6B7280" />
+                          <span>200m</span>
+                        </div>
+                        <span className="font-semibold text-blue-600">15,000원</span>
+                      </div>
+                    </div>
+                    <span className="bg-pink-100 text-pink-700 text-xs font-bold px-3 py-1 rounded-full">
+                      단골
+                    </span>
+                  </div>
+                  <button className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition mt-3">
+                    예약하기
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Icon name="utensils" size={24} color="#F97316" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-start justify-between mb-2">
+                    <div>
+                      <h3 className="font-bold text-lg text-gray-900 mb-1">
+                        건강한 도시락
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-3">
+                        저염식 도시락 배달 서비스
+                      </p>
+                      <div className="flex items-center gap-3 text-sm text-gray-500">
+                        <div className="flex items-center gap-1">
+                          <Icon name="star" size={16} color="#F59E0B" />
+                          <span className="font-semibold text-gray-900">4.7</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Icon name="clock" size={16} color="#6B7280" />
+                          <span>30분 배달</span>
+                        </div>
+                        <span className="font-semibold text-blue-600">8,000원~</span>
+                      </div>
+                    </div>
+                    <span className="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">
+                      NEW
+                    </span>
+                  </div>
+                  <button className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition mt-3">
+                    주문하기
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Icon name="gift" size={24} color="#A855F7" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-start justify-between mb-2">
+                    <div>
+                      <h3 className="font-bold text-lg text-gray-900 mb-1">
+                        시니어 요가 클래스
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-3">
+                        매주 화/목 오전 10시 커뮤니티 센터
+                      </p>
+                      <div className="flex items-center gap-3 text-sm text-gray-500">
+                        <div className="flex items-center gap-1">
+                          <Icon name="star" size={16} color="#F59E0B" />
+                          <span className="font-semibold text-gray-900">4.8</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Icon name="mapPin" size={16} color="#6B7280" />
+                          <span>500m</span>
+                        </div>
+                        <span className="font-semibold text-blue-600">무료</span>
+                      </div>
+                    </div>
+                    <span className="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full">
+                      인기
+                    </span>
+                  </div>
+                  <button className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition mt-3">
+                    신청하기
+                  </button>
+                </div>
               </div>
             </div>
           </div>
