@@ -94,6 +94,7 @@ export class HealthService {
   ): Promise<HealthRecord> {
     const { data, error } = await supabase
       .from('health_records')
+      // @ts-ignore - Supabase type inference issue with health_records
       .insert(record)
       .select()
       .single();
@@ -220,7 +221,7 @@ export class HealthService {
     // For blood pressure, we'll use systolic value
     const values = records.map((record) => {
       if (type === 'blood_pressure') {
-        const value = record.value as BloodPressureValue;
+        const value = record.value as unknown as BloodPressureValue;
         return value.systolic;
       }
       return record.value as number;

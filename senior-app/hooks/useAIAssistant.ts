@@ -44,7 +44,7 @@ export function useAIAssistant() {
     try {
       const conversation = await AIService.getConversation(conversationId);
       setCurrentConversation(conversation);
-      setMessages((conversation.messages as ChatMessage[]) || []);
+      setMessages((conversation.messages as unknown as ChatMessage[]) || []);
     } catch (err) {
       console.error('Error loading conversation:', err);
       setError(err as Error);

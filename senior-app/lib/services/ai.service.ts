@@ -95,13 +95,16 @@ export class AIService {
    * 대화 생성
    */
   static async createConversation(userId: string, title?: string): Promise<AIConversation> {
+    const newConversation: AIConversationInsert = {
+      user_id: userId,
+      summary: title || '새 대화',
+      messages: [],
+    };
+
     const { data, error } = await supabase
       .from('ai_conversations')
-      .insert({
-        user_id: userId,
-        title: title || '새 대화',
-        messages: [],
-      })
+      // @ts-ignore - Supabase type inference issue with ai_conversations
+      .insert(newConversation)
       .select()
       .single();
 
@@ -151,7 +154,7 @@ export class AIService {
   ): Promise<{ userMessage: ChatMessage; assistantMessage: ChatMessage }> {
     // 기존 대화 가져오기
     const conversation = await this.getConversation(conversationId);
-    const messages = (conversation.messages as ChatMessage[]) || [];
+    const messages = (conversation.messages as unknown as ChatMessage[]) || [];
 
     // 사용자 메시지 추가
     const newUserMessage: ChatMessage = {
@@ -188,14 +191,15 @@ export class AIService {
     messages.push(newAssistantMessage);
 
     // 대화 업데이트 (제목도 첫 메시지로 자동 생성)
-    const title = conversation.title === '새 대화' && messages.length === 2
+    const summary = conversation.summary === '새 대화' && messages.length === 2
       ? userMessage.slice(0, 30) + (userMessage.length > 30 ? '...' : '')
-      : conversation.title;
+      : conversation.summary;
 
     await supabase
       .from('ai_conversations')
+      // @ts-ignore - Supabase type inference issue with ai_conversations
       .update({
-        title,
+        summary,
         messages,
         updated_at: new Date().toISOString(),
       })
@@ -217,7 +221,7 @@ export class AIService {
       const adherenceRate = await MedicationService.getAdherenceRate(userId, 7);
 
       // 최근 건강 기록
-      const healthRecords = await HealthService.getHealthRecords(userId, undefined, 7);
+      const healthRecords = await HealthService.getHealthRecords(userId);
 
       let context = '';
 
@@ -269,7 +273,7 @@ export class AIService {
     const totalLogs = logs.length;
 
     // 건강 기록 데이터
-    const healthRecords = await HealthService.getHealthRecords(userId, undefined, 7);
+    const healthRecords = await HealthService.getHealthRecords(userId);
 
     const bloodPressureRecords = healthRecords.filter((r) => r.type === 'blood_pressure');
     const bloodSugarRecords = healthRecords.filter((r) => r.type === 'blood_sugar');

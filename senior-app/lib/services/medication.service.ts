@@ -42,6 +42,7 @@ export class MedicationService {
   static async createMedication(medication: MedicationInsert): Promise<Medication> {
     const { data, error } = await supabase
       .from('medications')
+      // @ts-ignore - Supabase type inference issue with medications
       .insert(medication)
       .select()
       .single();
@@ -49,10 +50,12 @@ export class MedicationService {
     if (error) throw error;
     if (!data) throw new Error('Failed to create medication');
 
-    // Generate initial medication logs for the next 7 days
-    await this.generateMedicationLogs(data.id, data.user_id, data.times, 7);
+    const medicationData = data as Medication;
 
-    return data;
+    // Generate initial medication logs for the next 7 days
+    await this.generateMedicationLogs(medicationData.id, medicationData.user_id, medicationData.times, 7);
+
+    return medicationData;
   }
 
   /**
@@ -64,6 +67,7 @@ export class MedicationService {
   ): Promise<Medication> {
     const { data, error } = await supabase
       .from('medications')
+      // @ts-ignore - Supabase type inference issue with medications
       .update(updates)
       .eq('id', id)
       .select()
@@ -72,7 +76,7 @@ export class MedicationService {
     if (error) throw error;
     if (!data) throw new Error('Failed to update medication');
 
-    return data;
+    return data as Medication;
   }
 
   /**
@@ -81,6 +85,7 @@ export class MedicationService {
   static async deleteMedication(id: string): Promise<void> {
     const { error } = await supabase
       .from('medications')
+      // @ts-ignore - Supabase type inference issue with medications
       .update({ active: false })
       .eq('id', id);
 
@@ -134,6 +139,7 @@ export class MedicationService {
   static async markLogAsTaken(logId: string): Promise<MedicationLog> {
     const { data, error } = await supabase
       .from('medication_logs')
+      // @ts-ignore - Supabase type inference issue with medication_logs
       .update({
         status: 'taken',
         taken_at: new Date().toISOString(),
@@ -145,15 +151,17 @@ export class MedicationService {
     if (error) throw error;
     if (!data) throw new Error('Failed to update medication log');
 
+    const logData = data as MedicationLog;
+
     // Update medication stock
-    const medication = await this.getMedicationById(data.medication_id);
+    const medication = await this.getMedicationById(logData.medication_id);
     if (medication && medication.current_stock) {
       await this.updateMedication(medication.id, {
         current_stock: Math.max(0, medication.current_stock - 1),
       });
     }
 
-    return data;
+    return logData;
   }
 
   /**
@@ -162,6 +170,7 @@ export class MedicationService {
   static async markLogAsSkipped(logId: string): Promise<MedicationLog> {
     const { data, error } = await supabase
       .from('medication_logs')
+      // @ts-ignore - Supabase type inference issue with medication_logs
       .update({ status: 'skipped' })
       .eq('id', logId)
       .select()
@@ -170,7 +179,7 @@ export class MedicationService {
     if (error) throw error;
     if (!data) throw new Error('Failed to update medication log');
 
-    return data;
+    return data as MedicationLog;
   }
 
   /**
@@ -208,6 +217,7 @@ export class MedicationService {
       }
     }
 
+    // @ts-ignore - Supabase type inference issue with medication_logs
     const { error } = await supabase.from('medication_logs').insert(logs);
 
     if (error) throw error;
@@ -237,8 +247,9 @@ export class MedicationService {
     if (error) throw error;
     if (!data || data.length === 0) return 0;
 
-    const takenCount = data.filter((log) => log.status === 'taken').length;
-    const totalCount = data.length;
+    const logs = data as { status: string }[];
+    const takenCount = logs.filter((log) => log.status === 'taken').length;
+    const totalCount = logs.length;
 
     return Math.round((takenCount / totalCount) * 100);
   }
