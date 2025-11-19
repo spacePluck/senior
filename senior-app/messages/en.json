@@ -16,35 +16,86 @@
     "regular": "Regular"
   },
   "home": {
+    "appName": "VIP Care",
+    "appSubtitle": "Healthy Senior Life",
+    "notification": "Notifications",
     "greeting": "Hello",
+    "greetingName": "Hello, {name}",
+    "greetingMessage": "Have a healthy day today",
+    "aiHealthConsult": "AI Health Consultation",
+    "weeklyReport": "Weekly Report",
     "aiAssistant": {
       "title": "AI Assistant",
       "placeholder": "What can the AI assistant help you with?"
-    },
-    "todayTasks": {
-      "title": "Today's Tasks",
-      "morningMedicine": "Morning Medication",
-      "medicineTime": "08:00 · Blood pressure, Diabetes",
-      "completeMedicine": "Completed",
-      "haircutBooking": "Haircut Appointment",
-      "haircutTime": "11:00 · Myeongseong Hair Salon",
-      "viewLocation": "View Location",
-      "call": "Call",
-      "arrivedButton": "I've Arrived"
     },
     "services": {
       "title": "Services",
       "haircut": "Haircut",
       "meal": "Meal",
       "hospital": "Hospital",
-      "cleaning": "Cleaning",
+      "medication": "Medication",
       "leisure": "Leisure",
       "taxi": "Taxi"
     },
+    "todayTasks": {
+      "title": "Today's Tasks",
+      "count": "{count}",
+      "viewAll": "View All",
+      "morningMedicine": "Morning Medication",
+      "medicineList": "Blood pressure, Diabetes",
+      "medicineTime": "08:00",
+      "completeMedicine": "Mark as Completed",
+      "hospitalVisit": "Hospital Visit",
+      "hospitalName": "Seoul National University Hospital",
+      "hospitalTime": "14:00",
+      "haircutBooking": "Haircut Appointment",
+      "haircutTime": "11:00 · Myeongseong Hair Salon",
+      "viewLocation": "View Location",
+      "location": "Location",
+      "call": "Call",
+      "phone": "Phone",
+      "arrivedButton": "I've Arrived"
+    },
     "recommendations": {
       "title": "This Week's Recommendations",
+      "viewMore": "View More",
       "favoriteShop": "This is your regular place! Would you like to make a reservation?",
-      "bookNow": "Book Now"
+      "bookNow": "Book Now",
+      "orderNow": "Order Now",
+      "applyNow": "Apply Now",
+      "regular": "Regular",
+      "new": "NEW",
+      "popular": "Popular",
+      "free": "Free",
+      "haircutShop": {
+        "name": "Myeongseong Hair Salon",
+        "description": "This is your regular place! Would you like to make a reservation?",
+        "rating": "4.9",
+        "distance": "200m",
+        "price": "₩15,000"
+      },
+      "healthyLunchbox": {
+        "name": "Healthy Lunchbox",
+        "description": "Low-sodium lunchbox delivery service",
+        "rating": "4.7",
+        "delivery": "30 min delivery",
+        "price": "₩8,000~"
+      },
+      "yogaClass": {
+        "name": "Senior Yoga Class",
+        "description": "Every Tue/Thu 10 AM at Community Center",
+        "rating": "4.8",
+        "distance": "500m"
+      }
+    },
+    "healthSummary": {
+      "title": "Health Summary",
+      "viewDetails": "View Details",
+      "bloodPressure": "Blood Pressure",
+      "bloodSugar": "Blood Sugar",
+      "medicationAdherence": "Medication Adherence",
+      "normal": "Normal",
+      "excellent": "Excellent"
     },
     "alerts": {
       "medicineComplete": "Medication completed!",

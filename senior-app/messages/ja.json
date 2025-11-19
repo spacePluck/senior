@@ -16,35 +16,86 @@
     "regular": "常連"
   },
   "home": {
+    "appName": "VIP Care",
+    "appSubtitle": "健康的なシニアライフ",
+    "notification": "通知",
     "greeting": "こんにちは",
+    "greetingName": "こんにちは、{name}さん",
+    "greetingMessage": "今日も健康な一日をお過ごしください",
+    "aiHealthConsult": "AI健康相談",
+    "weeklyReport": "週間レポート",
     "aiAssistant": {
       "title": "AIアシスタント",
       "placeholder": "AIアシスタントに何をお手伝いしますか？"
-    },
-    "todayTasks": {
-      "title": "今日のタスク",
-      "morningMedicine": "朝の薬",
-      "medicineTime": "08:00 · 血圧薬、糖尿病薬",
-      "completeMedicine": "服用完了",
-      "haircutBooking": "散髪予約",
-      "haircutTime": "11:00 · 明成理髪店",
-      "viewLocation": "場所を見る",
-      "call": "電話をかける",
-      "arrivedButton": "到着しました"
     },
     "services": {
       "title": "サービス",
       "haircut": "散髪",
       "meal": "食事",
       "hospital": "病院",
-      "cleaning": "清掃",
+      "medication": "服薬",
       "leisure": "レジャー",
       "taxi": "タクシー"
     },
+    "todayTasks": {
+      "title": "今日のタスク",
+      "count": "{count}",
+      "viewAll": "すべて表示",
+      "morningMedicine": "朝の薬",
+      "medicineList": "血圧薬、糖尿病薬",
+      "medicineTime": "08:00",
+      "completeMedicine": "服用完了",
+      "hospitalVisit": "病院診察",
+      "hospitalName": "ソウル大学病院",
+      "hospitalTime": "14:00",
+      "haircutBooking": "散髪予約",
+      "haircutTime": "11:00 · 明成理髪店",
+      "viewLocation": "場所を見る",
+      "location": "場所",
+      "call": "電話をかける",
+      "phone": "電話",
+      "arrivedButton": "到着しました"
+    },
     "recommendations": {
       "title": "今週のおすすめ",
+      "viewMore": "もっと見る",
       "favoriteShop": "常連店です！予約しますか？",
-      "bookNow": "予約する"
+      "bookNow": "予約する",
+      "orderNow": "注文する",
+      "applyNow": "申し込む",
+      "regular": "常連",
+      "new": "NEW",
+      "popular": "人気",
+      "free": "無料",
+      "haircutShop": {
+        "name": "明成理髪店",
+        "description": "常連店です！予約しますか？",
+        "rating": "4.9",
+        "distance": "200m",
+        "price": "15,000ウォン"
+      },
+      "healthyLunchbox": {
+        "name": "健康的なお弁当",
+        "description": "減塩弁当配達サービス",
+        "rating": "4.7",
+        "delivery": "30分配達",
+        "price": "8,000ウォン~"
+      },
+      "yogaClass": {
+        "name": "シニアヨガクラス",
+        "description": "毎週火/木曜日午前10時コミュニティセンター",
+        "rating": "4.8",
+        "distance": "500m"
+      }
+    },
+    "healthSummary": {
+      "title": "健康概要",
+      "viewDetails": "詳細を見る",
+      "bloodPressure": "血圧",
+      "bloodSugar": "血糖",
+      "medicationAdherence": "服薬遵守率",
+      "normal": "正常範囲",
+      "excellent": "優秀"
     },
     "alerts": {
       "medicineComplete": "服用完了！",

@@ -16,35 +16,86 @@
     "regular": "단골"
   },
   "home": {
+    "appName": "VIP Care",
+    "appSubtitle": "건강한 시니어 라이프",
+    "notification": "알림",
     "greeting": "안녕하세요",
+    "greetingName": "안녕하세요, {name}님",
+    "greetingMessage": "오늘도 건강한 하루 되세요",
+    "aiHealthConsult": "AI 건강 상담",
+    "weeklyReport": "주간 리포트",
     "aiAssistant": {
       "title": "AI 도우미",
       "placeholder": "AI 도우미에게 무엇을 도와드릴까요?"
-    },
-    "todayTasks": {
-      "title": "오늘 할 일",
-      "morningMedicine": "아침 약 복용",
-      "medicineTime": "08:00 · 혈압약, 당뇨약",
-      "completeMedicine": "복용 완료",
-      "haircutBooking": "이발 예약",
-      "haircutTime": "11:00 · 명성이발관",
-      "viewLocation": "위치 보기",
-      "call": "전화 걸기",
-      "arrivedButton": "도착했어요"
     },
     "services": {
       "title": "서비스",
       "haircut": "이발",
       "meal": "식사",
       "hospital": "병원",
-      "cleaning": "청소",
+      "medication": "복약",
       "leisure": "여가",
       "taxi": "택시"
     },
+    "todayTasks": {
+      "title": "오늘 할 일",
+      "count": "{count}",
+      "viewAll": "전체보기",
+      "morningMedicine": "아침 약 복용",
+      "medicineList": "혈압약, 당뇨약",
+      "medicineTime": "08:00",
+      "completeMedicine": "복용 완료",
+      "hospitalVisit": "병원 진료",
+      "hospitalName": "서울대병원",
+      "hospitalTime": "14:00",
+      "haircutBooking": "이발 예약",
+      "haircutTime": "11:00 · 명성이발관",
+      "viewLocation": "위치 보기",
+      "location": "위치",
+      "call": "전화 걸기",
+      "phone": "전화",
+      "arrivedButton": "도착했어요"
+    },
     "recommendations": {
       "title": "이번 주 추천",
+      "viewMore": "더보기",
       "favoriteShop": "단골집이에요! 예약하시겠어요?",
-      "bookNow": "예약하기"
+      "bookNow": "예약하기",
+      "orderNow": "주문하기",
+      "applyNow": "신청하기",
+      "regular": "단골",
+      "new": "NEW",
+      "popular": "인기",
+      "free": "무료",
+      "haircutShop": {
+        "name": "명성이발관",
+        "description": "단골집이에요! 예약하시겠어요?",
+        "rating": "4.9",
+        "distance": "200m",
+        "price": "15,000원"
+      },
+      "healthyLunchbox": {
+        "name": "건강한 도시락",
+        "description": "저염식 도시락 배달 서비스",
+        "rating": "4.7",
+        "delivery": "30분 배달",
+        "price": "8,000원~"
+      },
+      "yogaClass": {
+        "name": "시니어 요가 클래스",
+        "description": "매주 화/목 오전 10시 커뮤니티 센터",
+        "rating": "4.8",
+        "distance": "500m"
+      }
+    },
+    "healthSummary": {
+      "title": "건강 요약",
+      "viewDetails": "자세히 보기",
+      "bloodPressure": "혈압",
+      "bloodSugar": "혈당",
+      "medicationAdherence": "복약 순응도",
+      "normal": "정상 범위",
+      "excellent": "우수"
     },
     "alerts": {
       "medicineComplete": "복용 완료!",
